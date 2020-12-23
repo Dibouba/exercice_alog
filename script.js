@@ -18,6 +18,8 @@
 // tab[5]="y";
 // alert(tab);
 
+///********************************************************************************/
+
 /*****exo 6.3 *****/
 
 // var tab= []
@@ -52,6 +54,7 @@
 
 // alert(tab)
 
+///******************************************************************************/
 
 /*****exo 6.8******/
 
@@ -91,6 +94,8 @@
 // }
 // document.write(som)
 
+///**********************************************************************************************/
+
 /****exo6.10 ******/
 
 // var tab1=[4,8,7,9,1,5,4,6],
@@ -120,6 +125,8 @@
 // }
 // document.write(som)
 
+///*********************************************************************************************/
+
 /****exo 6.12 ******/
 
 
@@ -136,23 +143,119 @@
 // }
 // document.write(tab)
 
+///*******************************************************************************************/
+
 /***exo 6.13 ****/
 
- var n=parseInt(window.prompt("entrer la taille du tableau"))
-var tab= new Array(n)
-var pgn=0;
-var posi=0;
-for( var i=0; i<tab.length; i++)
-{ 
+//  var n=parseInt(window.prompt("entrer la taille du tableau"))
+// var tab= new Array(n)
+// var pgn=0;
+// var posi=0;
+// for( var i=0; i<tab.length; i++)
+// { 
     
-    var tmp=window.prompt("entrer un nombre");
-    console.log(tmp)
-    if(tmp>pgn)
-    {
+//     var tmp=parseInt(window.prompt("entrer un nombre"));
+//     console.log(tmp)
+//     tab[i]=tmp
+//     if(tab[i]>pgn)
+//     {
         
-        posi=i;
-        pgn=tmp;
-    }
+//         posi=i+1;
+//         pgn=tab[i];
+//     }
+   
+// }
+// document.write("le plus grand nombre est:"," ",pgn," ","et sa position est:"," ",posi)
+
+///******************************************************************************************/
+
+/****exo 6.14 *******/
+
+// var nb=parseInt(window.prompt("entrer le nombre de note qu'il faut saisir"));
+// var tab=new Array(nb)
+// var som=0;
+// var moy=0;
+// var pgmoy=0;
+// for(var i=0,nb=tab.length; i<nb; i++)
+// {
+//     var tmp=parseInt(window.prompt("entrer une note"));
+//     tab[i]=tmp;
+//     som+=tab[i];
+//     moy=som/nb;
+    
+    
+// }
+// for(i=0,nb=tab.length;i<nb;i++)
+// {
+//     if(tab[i]>moy)
+//     {
+//         pgmoy=pgmoy+1;
+//     }
+
+// }
+// document.write("la somme est:"+" "+som+" "+"la moyenne est:"+" "+moy+"<br>");
+// document.write("la note la plus superieur est:"+" "+pgmoy);
+
+///*********************************************************************************************/
+
+// var taille=parseInt(prompt("Veuillez entrer le nombre d'élément que vous voulez saisir: ")),
+//     tab_Note=new Array(taille),
+//     moyenne = 0,
+//     somme = 0,
+//     note_Sup = 0
+
+// for(var i = 0,lenght=tab_Note.length; i<lenght; i++)
+// {
+//     var tmp=parseInt(window.prompt("entrer une note"));
+//     tab_Note[i]=tmp;
+//     console.log(tmp)
+//     somme+=tab_Note[i];
+//     console.log(somme)
+//     moyenne=somme/lenght;
+//     console.log(moyenne)
+// }
+// for(i = 0,lenght = tab_Note.length;i < lenght;i++) {
+// if(tab_Note[i] > moyenne)
+//     {
+//         note_Sup=note_Sup+1
+//     }
+// }
+// document.write(note_Sup)
+
+///*******************************************************************************************************/
+
+/*****exo7.1 ******/
+var nb=parseInt(window.prompt("Donner la taille du tableau"))
+var tab=new Array(nb)
+for(var i=0; i<tab.length; i++)
+{
+    var memo=parseInt(window.prompt("entrer un nombre"));
+    tab[i]=memo;
+    console.log(tab[i]);
    
 }
-document.write("le plus grand nombre est:"," ",pgn," ","et sa position est:"," ",posi)
+for(i=0; i<tab.length;i++)
+{
+    var  min = tab[0];
+
+   if( min>tab[i])
+    {
+       
+        var tmp = min;
+        min =tab[i];
+        tab[i] = tmp;
+        console.log("le min"+min)
+        console.log("le tmp"+tmp)
+
+        console.log(tab[i])
+    }
+    else if(tab[i+1]==tab[i]+1)
+    {
+        document.write("les nombres sont consécutif:"+""+tab[i])
+    }
+    else{
+        document.write("nombre pas consécutif")
+    }
+    
+
+}
